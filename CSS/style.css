@@ -1,0 +1,27 @@
+*{}
+
+body{
+    background-color: darkcyan;
+}
+
+#container{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #ffffcc;
+}
+
+h1{
+    border-bottom: 1px solid black;
+    margin: 0 8% 0 8%;
+}
+
+input{
+    width: 50%;
+}
+
+#button{
+    width: 30%;
+    background-color: white;
+    margin-bottom: 7%;
+}
