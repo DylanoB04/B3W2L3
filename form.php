@@ -38,10 +38,52 @@
                 <h1>B3W2L1</h1><br>
                 <form action="form.php" method="POST">
                     <label for="textInput">Name: </label><br>
-                    <input type="text" id="textInput" name="txtInput"><br>
+                    <input type="text" id="textInput" name="txtInput" value=<?php echo $_POST['txtInput']?>>
+                    
+                    <?php
+                    
+                        if($_POST['txtInput'] == "" ){
+                        ?>
+
+                            <br><span style="color:red" id="txt1"> * Name required</span><br>  
+
+                        <?php
+                        }else{
+                        ?>
+
+                            <span style="color:red" id="txt1"> *</span><br>  
+
+                        <?php
+                        }
+                        ?>
+                    
+                  
+                    
                     <br>
                     <label for="emailInput">Email: </label><br>
-                    <input type="email" id="emailInput" name="mailInput"><br>
+                    <input type="email" id="emailInput" name="mailInput" value=<?php echo $_POST['mailInput'] ?>>
+                    
+                    
+                        <?php
+                        
+                            if($_POST['mailInput'] == ""){
+                        
+                        ?>
+
+                            <br><span style="color:red" id="txt2"> * Email required</span><br>  
+
+                        <?php
+                        }else{
+                        ?>
+
+                            <span style="color:red" id="txt2"> *</span><br>  
+
+                        <?php
+                        }
+                        ?>
+
+
+
                     <br>
                     <input type="submit" value="submit" id="button" name="submit">  
                 </form>
@@ -61,6 +103,19 @@
 
                     echo nl2br ("Naam: " . $opgeschoondeTxtInput . "\n" . "Emailadres: " . $opgeschoondeMailInput);
                 }else{}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 ?>
             </div>
